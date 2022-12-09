@@ -1,0 +1,13 @@
+# Don't touch library code
+/node_modules/
+/pnpm-lock.yaml
+/vendor/
+
+# Don't touch IDE configuraiton
+/.idea/
+
+# Don't touch coverage report
+/coverage*
+
+# Don't touch build output
+/dist/

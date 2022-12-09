@@ -1,0 +1,7 @@
+# Don't include external dependencies (will be installed in container when needed)
+/vendor/
+/node_modules/
+
+# Don't include binaries (will be built in container)
+/bin/
+/dist/

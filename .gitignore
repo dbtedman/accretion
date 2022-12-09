@@ -1,0 +1,19 @@
+# Don't include external dependencies
+/vendor/
+/node_modules/
+
+# Don't include IDE configuration
+/.idea
+
+# Don't include logs
+*.log
+
+# Don't include coverage reports
+/coverage*
+
+# Keep this file even if directory has been ignored
+!.keep
+
+# Don't include binaries or build output
+/bin/
+/dist/
