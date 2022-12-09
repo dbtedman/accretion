@@ -2,7 +2,7 @@ package main_test
 
 import (
 	"bytes"
-	"github.com/dbtedman/accretion/cmd/nuptials"
+	"github.com/dbtedman/accretion/cmd/accretion"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
