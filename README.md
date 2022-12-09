@@ -1,7 +1,6 @@
 # [Accretion](https://github.com/dbtedman/accretion)
 
 [![CI GitHub Pipeline](https://img.shields.io/github/workflow/status/dbtedman/accretion/ci?style=for-the-badge&logo=github&label=ci)](https://github.com/dbtedman/accretion/actions/workflows/ci.yml?query=branch%3Amain)
-[![Go Report Card](https://goreportcard.com/badge/github.com/dbtedman/accretion?style=for-the-badge)](https://goreportcard.com/report/github.com/dbtedman/accretion)
 
 > ⚠️ WARNING! This project is in early development, and is not ready for production use.
 
