@@ -22,7 +22,7 @@ jobs:
             security-events: write
         steps:
             - uses: "actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8"
-            - uses: "github/codeql-action/init@ec3cf9c605b848da5f1e41e8452719eb1ccfb9a6"
+            - uses: "github/codeql-action/init@a669cc5936cc5e1b6a362ec1ff9e410dc570d190"
               with:
                   languages: "go"
             - uses: "pnpm/action-setup@c3b53f6a16e57305370b4ae5a540c2077a1d50dd"
@@ -36,4 +36,4 @@ jobs:
               with:
                   go-version-file: "./go.mod"
             - run: "make install"
-            - uses: "github/codeql-action/analyze@ec3cf9c605b848da5f1e41e8452719eb1ccfb9a6"
+            - uses: "github/codeql-action/analyze@a669cc5936cc5e1b6a362ec1ff9e410dc570d190"
