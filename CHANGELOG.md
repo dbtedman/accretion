@@ -7,3 +7,4 @@ can contain both a **💡 Features and Improvements**, **🔧 Maintenance**, and
 ## 🚧 In Development
 
 -   Basic Project Structure
+-   Project Documentation
