@@ -48,6 +48,10 @@ make test
 
 ## Design
 
+### Data
+
+Primarily represented as a directed graph, persisted as a series of discrete events.
+
 ### Stack
 
 -   [✅ Cobra (cobra.dev)](https://cobra.dev)
@@ -82,6 +86,10 @@ plugin.
 ## References
 
 > 💡 Resources referenced during the development of this project.
+
+-   [Assigning permissions to jobs (docs.github.com)](https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs)
+-   [Configuration options for the dependabot.yml file (docs.github.com)](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#package-ecosystem)
+-   [Testing Your (HTTP) Handlers in Go](https://blog.questionable.services/article/testing-http-handlers-go/)
 
 ## License
 
