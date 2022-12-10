@@ -54,6 +54,7 @@ make test
 | ------------------- | ------------------------------------------------ |
 | `.github/`          | Dependabot configuration and pipeline workflows. |
 | `.husky/`           | Husky git hook configuration.                    |
+| `api/`              |                                                  |
 | `cmd/`              | Entrypoint to go application.                    |
 | `internal/domain/`  | Core application logic.                          |
 | `internal/gateway/` | Encapsulated access to external systems.         |
