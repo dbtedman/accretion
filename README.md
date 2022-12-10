@@ -72,7 +72,8 @@ make test
 
 ## Security
 
-_Placeholder_
+Read our [Security Guide](SECURITY.md) to learn how security is considered during the development and operation of this
+plugin.
 
 ## References
 
