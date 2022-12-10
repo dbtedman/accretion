@@ -48,9 +48,21 @@ make test
 
 ## Design
 
+### Repository Structure
+
+| Directory           | Purpose                                          |
+| ------------------- | ------------------------------------------------ |
+| `.github/`          | Dependabot configuration and pipeline workflows. |
+| `.husky/`           | Husky git hook configuration.                    |
+| `cmd/`              | Entrypoint to go application.                    |
+| `internal/domain/`  | Core application logic.                          |
+| `internal/gateway/` | Encapsulated access to external systems.         |
+| `public/`           | Static assets included directly in ui.           |
+| `ui/`               | Web ui that interacts with go backend.           |
+
 ### Data
 
-Primarily represented as a directed graph, persisted as a series of discrete events.
+Primarily represented as a directed graph, persisted as a series of discrete events. Events allow for time traveling though the data.
 
 ### Stack
 
