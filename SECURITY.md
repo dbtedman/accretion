@@ -12,10 +12,13 @@ Outlines how security is considered during the development of Accretion.
 
 ## Dependency Vulnerability Scanning
 
+-   [GitHub code scanning](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning) via [CodeQL](https://codeql.github.com) and [Snyk](https://snyk.io)
 -   [GitHub dependabot alerts](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)
 -   [GitHub dependabot security updates](https://docs.github.com/en/code-security/dependabot/dependabot-security-updates/about-dependabot-security-updates)
--   [GitHub code scanning](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning) via [CodeQL](https://codeql.github.com)
 -   [GitHub secret scanning](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning)
+-   [Snyk code analysis](https://snyk.io/product/snyk-code/)
+-   [Snyk container scanning](https://snyk.io/product/container-vulnerability-management/)
+-   [Snyk dependency scanning](https://snyk.io/product/open-source-security-management/)
 
 ## Security Disclosure Policy
 
