@@ -17,8 +17,8 @@ func main() {
 
 func RootCommand() *cobra.Command {
 	rootCommand := &cobra.Command{
-		Use:   "",
-		Short: "",
+		Use:   "accretion",
+		Short: "Manage internal technical documentation that is enriched with live data accreted from your environment.",
 		Run: func(cmd *cobra.Command, args []string) {
 			_ = cmd.Help()
 		},
