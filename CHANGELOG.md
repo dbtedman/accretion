@@ -9,3 +9,4 @@ can contain both a **💡 Features and Improvements**, **🔧 Maintenance**, and
 -   Basic Project Structure
 -   Project Documentation
 -   CI and SAST Pipelines
+-   Embed UI static assets

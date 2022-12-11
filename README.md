@@ -103,6 +103,9 @@ plugin.
 -   [Assigning permissions to jobs (docs.github.com)](https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs)
 -   [Configuration options for the dependabot.yml file (docs.github.com)](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#package-ecosystem)
 -   [Testing Your (HTTP) Handlers in Go (blog.questionable.services)](https://blog.questionable.services/article/testing-http-handlers-go/)
+-   [What's the best way to bundle static resources in a Go program? (stackoverflow.com)](https://stackoverflow.com/questions/13904441)
+-   [Changing the input and output directory in Vite (stackoverflow.com)](https://stackoverflow.com/questions/66863200)
+-   [Serve embedded filesystem from root path of URL (stackoverflow.com)](https://stackoverflow.com/questions/66248258)
 
 ## License
 

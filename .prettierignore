@@ -10,4 +10,4 @@
 /**/coverage*
 
 # Don't touch build output
-/dist/
+/**/dist/

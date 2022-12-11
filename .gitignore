@@ -18,4 +18,4 @@
 
 # Don't include binaries or build output
 /bin/
-/dist/
+/**/dist/

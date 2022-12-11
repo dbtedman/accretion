@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"github.com/dbtedman/accretion/ui"
 	"github.com/spf13/cobra"
+	"net/http"
 	"os"
 )
 
@@ -20,7 +22,9 @@ func RootCommand() *cobra.Command {
 		Use:   "accretion",
 		Short: "Manage internal technical documentation that is enriched with live data accreted from your environment.",
 		Run: func(cmd *cobra.Command, args []string) {
-			_ = cmd.Help()
+			//_ = cmd.Help()
+			ui.HandleStaticAssets()
+			_ = http.ListenAndServe(":8080", nil)
 		},
 	}
 
