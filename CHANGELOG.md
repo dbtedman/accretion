@@ -8,4 +8,4 @@ can contain both a **💡 Features and Improvements**, **🔧 Maintenance**, and
 
 -   Basic Project Structure
 -   Project Documentation
--   Expanded SAST CI Workflow
+-   CI and SAST Pipelines
