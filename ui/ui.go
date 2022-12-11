@@ -41,6 +41,14 @@ func HandleStaticAssets() {
 		log.Fatal(err)
 	}
 
-	// TODO: We want to assign headers to the static assets results
-	http.Handle("/assets/", http.FileServer(http.FS(distDirectory)))
+	assetsFS := http.FileServer(http.FS(distDirectory))
+	http.Handle("/assets/", handleAssets(assetsFS))
+}
+
+func handleAssets(assetsFS http.Handler) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Cache-Control", "max-age=604800")
+
+		assetsFS.ServeHTTP(w, r)
+	}
 }
