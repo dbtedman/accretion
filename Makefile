@@ -24,11 +24,11 @@ format:
 
 .PHONY: test
 test:
-	@go test -race -cover -coverprofile=coverage.out -covermode=atomic ./...
+	@pnpm run test && go test -race -cover -coverprofile=coverage.out -covermode=atomic ./...
 
 .PHONY: test_fast
 test_fast:
-	@CGO_ENABLED=0 go test ./...
+	@pnpm run test:fast && CGO_ENABLED=0 go test ./...
 
 .PHONY: build
 build: build_ts build_go

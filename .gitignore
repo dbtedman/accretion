@@ -1,6 +1,7 @@
 # Don't include external dependencies
 /vendor/
 /node_modules/
+/**/node_modules/
 
 # Don't include IDE configuration
 /.idea
@@ -10,6 +11,7 @@
 
 # Don't include coverage reports
 /coverage*
+/ui/coverage*
 
 # Keep this file even if directory has been ignored
 !.keep

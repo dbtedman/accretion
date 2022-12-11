@@ -1,5 +1,5 @@
 # Don't touch library code
-/node_modules/
+/**/node_modules/
 /pnpm-lock.yaml
 /vendor/
 
@@ -7,7 +7,7 @@
 /.idea/
 
 # Don't touch coverage report
-/coverage*
+/**/coverage*
 
 # Don't touch build output
 /dist/
