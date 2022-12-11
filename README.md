@@ -101,11 +101,14 @@ plugin.
 > 💡 Resources referenced during the development of this project.
 
 -   [Assigning permissions to jobs (docs.github.com)](https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs)
+-   [Cache-Control (developer.mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
+-   [Changing the input and output directory in Vite (stackoverflow.com)](https://stackoverflow.com/questions/66863200)
 -   [Configuration options for the dependabot.yml file (docs.github.com)](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#package-ecosystem)
+-   [Go by Example: Regular Expressions (gobyexample.com)](https://gobyexample.com/regular-expressions)
+-   [How to Use go:embed in Go (blog.jetbrains.com)](https://blog.jetbrains.com/go/2021/06/09/how-to-use-go-embed-in-go-1-16/)
+-   [Serve embedded filesystem from root path of URL (stackoverflow.com)](https://stackoverflow.com/questions/66248258)
 -   [Testing Your (HTTP) Handlers in Go (blog.questionable.services)](https://blog.questionable.services/article/testing-http-handlers-go/)
 -   [What's the best way to bundle static resources in a Go program? (stackoverflow.com)](https://stackoverflow.com/questions/13904441)
--   [Changing the input and output directory in Vite (stackoverflow.com)](https://stackoverflow.com/questions/66863200)
--   [Serve embedded filesystem from root path of URL (stackoverflow.com)](https://stackoverflow.com/questions/66248258)
 
 ## License
 
