@@ -37,7 +37,7 @@ func serveCommand() *cobra.Command {
 		Short: "",
 		Run: func(cmd *cobra.Command, args []string) {
 			ui.HandleStaticAssets()
-			_ = http.ListenAndServe(":8080", nil)
+			_ = http.ListenAndServe(":3000", nil)
 		},
 	}
 

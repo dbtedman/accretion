@@ -7,12 +7,15 @@ all: install lint build
 pre_commit: lint
 
 .PHONY: install
-install: install_go
-	@pnpm install
+install: install_go install_pnpm
 
 .PHONY: install_go
 install_go:
 	@go mod vendor
+
+.PHONY: install_pnpm
+install_pnpm:
+	@pnpm install
 
 .PHONY: lint
 lint:

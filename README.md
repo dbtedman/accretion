@@ -76,6 +76,7 @@ Primarily represented as a directed graph, persisted as a series of discrete eve
 -   [✅ GitHub Actions (github.com)](https://github.com/features/actions)
 -   [✅ GitHub Security (github.com)](https://github.com/security)
 -   [✅ Go (go.dev)](https://go.dev)
+-   [✅ Go Embed (pkg.go.dev)](https://pkg.go.dev/embed)
 -   [✅ Go Modules (go.dev)](https://go.dev/ref/mod)
 -   [✅ Husky (typicode.github.io)](https://typicode.github.io/husky/#/)
 -   [✅ Node Version Manager (github.com)](https://github.com/nvm-sh/nvm)
