@@ -1,4 +1,4 @@
-FROM node:18.12.1 as build_node
+FROM node:18.12.1-bullseye as build_node
 
 RUN npm install -g pnpm@7.18.1
 

@@ -10,3 +10,4 @@ can contain both a **💡 Features and Improvements**, **🔧 Maintenance**, and
 -   Project Documentation
 -   CI and SAST Pipelines
 -   Embed UI static assets
+-   UI Layout

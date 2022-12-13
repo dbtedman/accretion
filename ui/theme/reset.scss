@@ -1,0 +1,16 @@
+@import "./colour";
+@import "./font";
+
+:root,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $base-font-family;
+    font-size: $body-font-size;
+
+    @media (prefers-color-scheme: dark) {
+        color: $dark-body-font;
+        background-color: $dark-background;
+    }
+}
