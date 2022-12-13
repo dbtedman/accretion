@@ -1,10 +1,5 @@
-<script>
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import AccretionSearch from "@/components/AccretionSearch/AccretionSearch.vue";
-
-export default defineComponent({
-    components: { AccretionSearch },
-});
 </script>
 
 <template>
