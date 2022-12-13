@@ -61,6 +61,10 @@ make test
 | `public/`           | Static assets included directly in ui.           |
 | `ui/`               | Web ui that interacts with go backend.           |
 
+### Light and Dark Modes
+
+The user interface will automatically switch between dark and light mode based on the operating systems chosen mode.
+
 ### Data
 
 Primarily represented as a directed graph, persisted as a series of discrete events. Events allow for time traveling though the data.
