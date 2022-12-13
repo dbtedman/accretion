@@ -8,6 +8,12 @@ body {
     margin: 0;
     font-family: $base-font-family;
     font-size: $body-font-size;
+    color: $light-body-font;
+    font-synthesis: none; // https://developer.mozilla.org/en-US/docs/Web/CSS/font-synthesis
+    -webkit-font-smoothing: antialiased; // https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
+    -moz-osx-font-smoothing: grayscale;
+    direction: ltr; // https://developer.mozilla.org/en-US/docs/Web/CSS/direction
+    text-align: left;
 
     @media (prefers-color-scheme: dark) {
         color: $dark-body-font;
