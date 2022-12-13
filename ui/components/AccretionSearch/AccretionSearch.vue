@@ -25,26 +25,38 @@
 @import "../../theme/size";
 @import "../../theme/colour";
 
-// TODO: Dark/Light
-
 .container {
     position: relative;
 
     input {
-        background-color: darken($dark-background, 2);
+        background-color: darken($light-background, 2);
         padding: math.div($grid, 2) $grid * 2;
         width: $grid * 20;
-        color: $dark-body-font;
+        color: $light-body-font;
         font-size: 1.5rem;
-        border: 1px solid darken($dark-background, 4);
+        border: 1px solid darken($light-background, 4);
+
+        @media (prefers-color-scheme: dark) {
+            background-color: darken($dark-background, 2);
+            color: $dark-body-font;
+            border: 1px solid darken($dark-background, 4);
+        }
 
         &:focus {
             outline: none;
-            border-color: $dark-body-font;
+            border-color: $light-body-font;
+
+            @media (prefers-color-scheme: dark) {
+                border-color: $dark-body-font;
+            }
         }
 
         &::placeholder {
-            color: rgba($dark-body-font, 0.5);
+            color: rgba($light-body-font, 0.5);
+
+            @media (prefers-color-scheme: dark) {
+                color: rgba($dark-body-font, 0.5);
+            }
         }
     }
 }
@@ -64,8 +76,12 @@
         margin-right: math.div($grid, 1.5);
         background: none;
         border: none;
-        color: $dark-body-font;
+        color: $light-body-font;
         cursor: pointer;
+
+        @media (prefers-color-scheme: dark) {
+            color: $dark-body-font;
+        }
     }
 }
 
@@ -84,8 +100,12 @@
         margin-right: math.div($grid, 1.5);
         background: none;
         border: none;
-        color: $dark-body-font;
+        color: $light-body-font;
         cursor: pointer;
+
+        @media (prefers-color-scheme: dark) {
+            color: $dark-body-font;
+        }
     }
 }
 </style>
