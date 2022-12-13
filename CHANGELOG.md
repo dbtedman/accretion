@@ -11,3 +11,4 @@ can contain both a **💡 Features and Improvements**, **🔧 Maintenance**, and
 -   CI and SAST Pipelines
 -   Embed UI static assets
 -   UI Layout
+-   Search Component
