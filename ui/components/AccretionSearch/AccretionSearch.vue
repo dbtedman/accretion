@@ -6,14 +6,14 @@
         <div class="search-icon">
             <!-- https://fonts.google.com/icons -->
             <!-- TODO: Encapsulate icons in a component. -->
-            <button class="search-icon__button">
+            <button class="search-icon__button" data-test-id="search-icon">
                 <span class="material-symbols-outlined">search</span>
             </button>
         </div>
         <div class="clear-icon">
             <!-- https://fonts.google.com/icons -->
             <!-- TODO: Encapsulate icons in a component. -->
-            <button class="clear-icon__button">
+            <button class="clear-icon__button" data-test-id="close-icon">
                 <span class="material-symbols-outlined">close</span>
             </button>
         </div>

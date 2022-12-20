@@ -10,6 +10,9 @@ export default defineConfig({
     build: {
         outDir: "./ui/dist/",
     },
+    test: {
+        environment: "happy-dom",
+    },
     resolve: {
         alias: {
             "@": fileURLToPath(new URL("./ui", import.meta.url)),
