@@ -1,10 +1,10 @@
 .DEFAULT_GOAL := all
 
 .PHONY: all
-all: install lint build
+all: install lint type_check build test
 
 .PHONY: pre_commit
-pre_commit: lint
+pre_commit: lint type_check test_fast
 
 .PHONY: install
 install: install_go install_pnpm
@@ -20,6 +20,10 @@ install_pnpm:
 .PHONY: lint
 lint:
 	@pnpm run lint && gofmt -l ./cmd ./internal
+
+.PHONY: type_check
+type_check:
+	@pnpm run type-check
 
 .PHONY: format
 format:

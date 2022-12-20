@@ -8,8 +8,8 @@
     "dev": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
-    "test": "vitest run --coverage --environment jsdom --root ui/",
-    "test:fast": "vitest run --environment jsdom --root ui/",
+    "test": "vitest run --coverage --root ui/",
+    "test:fast": "vitest run --root ui/",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },

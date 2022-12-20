@@ -1,10 +1,5 @@
-<script>
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import AccretionIcon from "@/components/AccretionIcon/AccretionIcon.vue";
-
-export default defineComponent({
-    components: { AccretionIcon },
-});
 </script>
 
 <template>
