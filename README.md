@@ -106,6 +106,7 @@ plugin.
 
 > 💡 Resources referenced during the development of this project.
 
+-   [\<script setup\> (vuejs.org)](https://vuejs.org/api/sfc-script-setup.html#script-setup)
 -   [Assigning permissions to jobs (docs.github.com)](https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs)
 -   [Cache-Control (developer.mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
 -   [Changing the input and output directory in Vite (stackoverflow.com)](https://stackoverflow.com/questions/66863200)

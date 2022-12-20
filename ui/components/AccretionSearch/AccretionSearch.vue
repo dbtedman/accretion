@@ -1,20 +1,23 @@
-<script setup lang="ts"></script>
+<script>
+import { defineComponent } from "vue";
+import AccretionIcon from "@/components/AccretionIcon/AccretionIcon.vue";
+
+export default defineComponent({
+    components: { AccretionIcon },
+});
+</script>
 
 <template>
     <div class="container">
         <input type="text" placeholder="Search for accreted resources" />
         <div class="search-icon">
-            <!-- https://fonts.google.com/icons -->
-            <!-- TODO: Encapsulate icons in a component. -->
             <button class="search-icon__button" data-test-id="search-icon">
-                <span class="material-symbols-outlined">search</span>
+                <AccretionIcon kind="search"></AccretionIcon>
             </button>
         </div>
         <div class="clear-icon">
-            <!-- https://fonts.google.com/icons -->
-            <!-- TODO: Encapsulate icons in a component. -->
             <button class="clear-icon__button" data-test-id="close-icon">
-                <span class="material-symbols-outlined">close</span>
+                <AccretionIcon kind="close"></AccretionIcon>
             </button>
         </div>
     </div>
