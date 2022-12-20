@@ -1,6 +1,6 @@
 # [Accretion](https://github.com/dbtedman/accretion) // Security
 
-[![SAST GitHub Pipeline](https://img.shields.io/github/workflow/status/dbtedman/accretion/sast?style=for-the-badge&logo=github&label=sast)](https://github.com/dbtedman/accretion/actions/workflows/sast.yml)
+[![SAST GitHub Pipeline](https://img.shields.io/github/actions/workflow/status/dbtedman/accretion/sast.yml?branch=main&style=for-the-badge&logo=github&label=sast)](https://github.com/dbtedman/accretion/actions/workflows/sast.yml)
 
 Outlines how security is considered during the development of Accretion.
 
