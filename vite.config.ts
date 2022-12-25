@@ -8,7 +8,7 @@ import vue from "@vitejs/plugin-vue";
 export default defineConfig({
     plugins: [vue()],
     build: {
-        outDir: "./ui/dist/",
+        outDir: "./web/dist/",
     },
     test: {
         environment: "happy-dom",

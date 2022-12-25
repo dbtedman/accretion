@@ -59,7 +59,8 @@ make test
 | `internal/domain/`  | Core application logic.                          |
 | `internal/gateway/` | Encapsulated access to external systems.         |
 | `public/`           | Static assets included directly in ui.           |
-| `ui/`               | Web ui that interacts with go backend.           |
+| `ui/`               | Vue based user interface.                        |
+| `web/`              |                                                  |
 
 ### Light and Dark Modes
 

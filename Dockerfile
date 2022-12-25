@@ -15,7 +15,7 @@ COPY ./ /code
 
 WORKDIR /code
 
-COPY --from=build_node /code/ui/dist/ /code/ui/dist/
+COPY --from=build_node /code/web/dist/ /code/web/dist/
 
 RUN make install_go build_go
 

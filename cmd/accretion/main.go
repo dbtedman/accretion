@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/dbtedman/accretion/ui"
+	"github.com/dbtedman/accretion/web"
 	"github.com/spf13/cobra"
 	"math/rand"
 	"net/http"
@@ -41,7 +41,7 @@ func serveCommand() *cobra.Command {
 		Use:   "serve",
 		Short: "",
 		Run: func(cmd *cobra.Command, args []string) {
-			ui.UI()
+			web.UI()
 			_ = http.ListenAndServe(":3000", nil)
 		},
 	}
