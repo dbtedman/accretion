@@ -106,16 +106,20 @@ plugin.
 
 > 💡 Resources referenced during the development of this project.
 
--   [\<script setup\> (vuejs.org)](https://vuejs.org/api/sfc-script-setup.html#script-setup)
 -   [Assigning permissions to jobs (docs.github.com)](https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs)
 -   [Cache-Control (developer.mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
 -   [Changing the input and output directory in Vite (stackoverflow.com)](https://stackoverflow.com/questions/66863200)
 -   [Configuration options for the dependabot.yml file (docs.github.com)](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#package-ecosystem)
 -   [Go by Example: Regular Expressions (gobyexample.com)](https://gobyexample.com/regular-expressions)
+-   [How to Hash and Verify Passwords With Argon2 in Go](https://www.alexedwards.net/blog/how-to-hash-and-verify-passwords-with-argon2-in-go)
 -   [How to Use go:embed in Go (blog.jetbrains.com)](https://blog.jetbrains.com/go/2021/06/09/how-to-use-go-embed-in-go-1-16/)
+-   [How to properly seed random number generator (stackoverflow.com)](https://stackoverflow.com/questions/12321133/how-to-properly-seed-random-number-generator)
+-   [Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
 -   [Serve embedded filesystem from root path of URL (stackoverflow.com)](https://stackoverflow.com/questions/66248258)
 -   [Testing Your (HTTP) Handlers in Go (blog.questionable.services)](https://blog.questionable.services/article/testing-http-handlers-go/)
+-   [Using a nonce with CSP (content-security-policy.com)](https://content-security-policy.com/nonce/)
 -   [What's the best way to bundle static resources in a Go program? (stackoverflow.com)](https://stackoverflow.com/questions/13904441)
+-   [\<script setup\> (vuejs.org)](https://vuejs.org/api/sfc-script-setup.html#script-setup)
 
 ## License
 

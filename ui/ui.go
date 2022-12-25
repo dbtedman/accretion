@@ -1,9 +1,9 @@
 package ui
 
 import (
-	"bytes"
 	"embed"
-	"html/template"
+	"fmt"
+	"github.com/dbtedman/accretion/internal/domain/csp"
 	"io/fs"
 	"log"
 	"net/http"
@@ -14,55 +14,62 @@ import (
 //go:embed dist
 var embeddedFS embed.FS
 
-func HandleStaticAssets() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		isNotUIRoute, _ := regexp.MatchString("^(assets|api)/*", r.URL.Path)
+const HTTPContentType = "Content-Type"
+const HTTPCacheControl = "Cache-Control"
+const HTTPContentSecurityPolicy = "Content-Security-Policy"
 
-		if isNotUIRoute {
-			return
-		}
-
-		uiIndexHTML, err := template.ParseFS(embeddedFS, "dist/index.html")
-
-		if err != nil {
-			w.WriteHeader(http.StatusInternalServerError)
-			return
-		}
-
-		w.Header().Set("Content-Type", "text/html")
-		w.Header().Set("Cache-Control", "no-cache")
-		// https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
-		w.Header().Set(
-			"Content-Security-Policy",
-			"default-src 'self'; style-src 'self' 'nonce-1234' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;",
-		)
-		w.WriteHeader(http.StatusOK)
-
-		// TODO: nonce (https://content-security-policy.com/nonce/)
-		// TODO: Cleanup this code and use a nonce with actual random value to it
-		var tpl bytes.Buffer
-		if err := uiIndexHTML.Execute(&tpl, map[string]interface{}{}); err != nil {
-			return
-		}
-
-		var index string = tpl.String()
-		replacedIndex := strings.ReplaceAll(index, "PLACEHOLDER_NONCE", "1234")
-
-		_, _ = w.Write([]byte(replacedIndex))
-	})
-
+func UI() {
 	distDirectory, err := fs.Sub(embeddedFS, "dist")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	assetsFS := http.FileServer(http.FS(distDirectory))
-	http.Handle("/assets/", handleAssets(assetsFS))
+
+	http.HandleFunc("/", indexHandler)
+	http.Handle("/assets/", assetHandlerMiddleware(assetsFS))
 }
 
-func handleAssets(assetsFS http.Handler) http.HandlerFunc {
+func indexHandler(w http.ResponseWriter, r *http.Request) {
+	isNotUIRoute, _ := regexp.MatchString("^(assets|api)/*", r.URL.Path)
+
+	if isNotUIRoute {
+		// This function is does not handle static asset routes, or api routes.
+		return
+	}
+
+	indexHTMLBytes, err := embeddedFS.ReadFile("dist/index.html")
+	indexHTML := string(indexHTMLBytes)
+
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		fmt.Println(err.Error())
+		return
+	}
+
+	nonce := csp.GenerateNonce()
+
+	// Add nonce into our HTML by replacing placeholder string.
+	indexHTML = strings.ReplaceAll(indexHTML, "PLACEHOLDER_NONCE", nonce)
+
+	w.Header().Set(HTTPContentType, "text/html; charset=utf-8")
+	w.Header().Set(HTTPCacheControl, "max-age=0, private, must-revalidate")
+	w.Header().Set(HTTPContentSecurityPolicy, csp.Generate(nonce))
+
+	w.WriteHeader(http.StatusOK)
+
+	// Respond with our index.html file.
+	_, err = w.Write([]byte(indexHTML))
+
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+}
+
+func assetHandlerMiddleware(assetsFS http.Handler) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Cache-Control", "max-age=604800")
+		w.Header().Set(HTTPCacheControl, "max-age=604800")
 
 		assetsFS.ServeHTTP(w, r)
 	}
