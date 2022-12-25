@@ -16,6 +16,7 @@ Outlines how security is considered during the development of Accretion.
 -   [GitHub dependabot alerts](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)
 -   [GitHub dependabot security updates](https://docs.github.com/en/code-security/dependabot/dependabot-security-updates/about-dependabot-security-updates)
 -   [GitHub secret scanning](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning)
+-   [OSV Scanning](https://osv.dev/)
 -   [Snyk code analysis](https://snyk.io/product/snyk-code/)
 -   [Snyk container scanning](https://snyk.io/product/container-vulnerability-management/)
 -   [Snyk dependency scanning](https://snyk.io/product/open-source-security-management/)

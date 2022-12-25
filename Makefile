@@ -1,10 +1,10 @@
 .DEFAULT_GOAL := all
 
 .PHONY: all
-all: install lint type_check build test
+all: install lint type_check build test sast
 
 .PHONY: pre_commit
-pre_commit: lint type_check test_fast
+pre_commit: lint type_check test_fast sast
 
 .PHONY: install
 install: install_go install_pnpm
@@ -60,3 +60,14 @@ local:
 	@docker compose down --volumes --rmi local \
 		&& docker compose up --detach \
 		&& echo "visit http://localhost:3000"
+
+.PHONY: sast
+sast: sast_snyk sast_osv
+
+.PHONY: sast_snyk
+sast_snyk:
+	snyk test --all-projects --detection-depth=1
+
+.PHONY: sast_osv
+sast_osv:
+	osv-scanner ./
