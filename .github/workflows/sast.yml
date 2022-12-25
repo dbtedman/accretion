@@ -33,6 +33,7 @@ jobs:
                   go-version-file: "./go.mod"
             - uses: "snyk/actions/setup@1cc9026f51d822442cb4b872d8d7ead8cc69a018"
             - run: "make install"
+            - run: "make build"
             - run: "snyk test --all-projects --detection-depth=1 --severity-threshold=high --sarif-file-output=snyk.sarif"
               continue-on-error: true
               env:
