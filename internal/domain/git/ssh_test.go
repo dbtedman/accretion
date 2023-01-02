@@ -9,5 +9,6 @@ import (
 const ssh = "git@github.com:dbtedman/accretion.git"
 
 func TestSSHToString(t *testing.T) {
-	assert.Equal(t, ssh, git.NewSSH(ssh).ToString())
+	gitSSH, _ := git.NewSSH(ssh)
+	assert.Equal(t, ssh, gitSSH.ToString())
 }

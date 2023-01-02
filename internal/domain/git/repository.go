@@ -1,5 +1,13 @@
 package git
 
+func NewRepository(cloneHTTPS string, cloneSSH SSH, url string) Repository {
+	return repository{
+		cloneHTTPS,
+		cloneSSH,
+		url,
+	}
+}
+
 type Repository interface {
 	CloneHTTPS() string
 	CloneSSH() SSH
@@ -22,12 +30,4 @@ func (my repository) CloneSSH() SSH {
 
 func (my repository) URL() string {
 	return my.url
-}
-
-func NewRepository(cloneHTTPS string, cloneSSH SSH, url string) Repository {
-	return repository{
-		cloneHTTPS,
-		cloneSSH,
-		url,
-	}
 }
