@@ -68,7 +68,34 @@ The user interface will automatically switch between dark and light mode based o
 
 ### Data
 
-Primarily represented as a directed graph, persisted as a series of discrete events. Events allow for time traveling though the data.
+Primarily represented as a directed graph, persisted as a series of discrete events. Events allow for time traveling
+though the data.
+
+### Domain
+
+(Proposed)
+
+-   Source Code
+    -   Git Repository
+    -   Git Reference
+    -   Git Commit
+    -   Merge Request
+-   Work Item
+    -   Issue
+    -   Board
+-   External Dependency
+-   Product
+
+### Providers
+
+(Proposed)
+
+-   Bitbucket
+-   Confluence
+-   GitHub
+-   GitLab
+-   Jira
+-   NPM
 
 ### Stack
 
