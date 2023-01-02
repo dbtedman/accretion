@@ -11,19 +11,20 @@ const cloneSSH = "git@github.com:dbtedman/accretion.git"
 const url = "https://github.com/dbtedman/accretion"
 
 func TestGitRepositoryHasCloneHTTPS(t *testing.T) {
-	repository := git.NewRepository(cloneHTTPS, cloneSSH, url)
+	repository := git.NewRepository(cloneHTTPS, git.NewSSH(cloneSSH), url)
 
 	assert.Equal(t, cloneHTTPS, repository.CloneHTTPS())
 }
 
 func TestGitRepositoryHasCloneSSH(t *testing.T) {
-	repository := git.NewRepository(cloneHTTPS, cloneSSH, url)
+	repository := git.NewRepository(cloneHTTPS, git.NewSSH(cloneSSH), url)
 
-	assert.Equal(t, cloneSSH, repository.CloneSSH())
+	assert.Equal(t, cloneSSH, repository.CloneSSH().ToString())
+	assert.Implements(t, (*git.SSH)(nil), repository.CloneSSH())
 }
 
 func TestGitRepositoryHasURL(t *testing.T) {
-	repository := git.NewRepository(cloneHTTPS, cloneSSH, url)
+	repository := git.NewRepository(cloneHTTPS, git.NewSSH(cloneSSH), url)
 
 	assert.Equal(t, url, repository.URL())
 }
