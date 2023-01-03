@@ -1,6 +1,8 @@
 package git
 
-func NewRepository(cloneHTTPS string, cloneSSH SSH, url string) Repository {
+import "net/url"
+
+func NewRepository(cloneHTTPS string, cloneSSH CloneSSH, url url.URL) Repository {
 	return repository{
 		cloneHTTPS,
 		cloneSSH,
@@ -10,24 +12,27 @@ func NewRepository(cloneHTTPS string, cloneSSH SSH, url string) Repository {
 
 type Repository interface {
 	CloneHTTPS() string
-	CloneSSH() SSH
-	URL() string
+	CloneSSH() CloneSSH
+	URL() url.URL
 }
 
 type repository struct {
 	cloneHTTPS string
-	cloneSSH   SSH
-	url        string
+	cloneSSH   CloneSSH
+	url        url.URL
 }
+
+// ensure repository implements Repository interface
+var _ Repository = repository{}
 
 func (my repository) CloneHTTPS() string {
 	return my.cloneHTTPS
 }
 
-func (my repository) CloneSSH() SSH {
+func (my repository) CloneSSH() CloneSSH {
 	return my.cloneSSH
 }
 
-func (my repository) URL() string {
+func (my repository) URL() url.URL {
 	return my.url
 }

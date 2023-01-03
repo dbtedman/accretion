@@ -3,31 +3,39 @@ package git_test
 import (
 	"github.com/dbtedman/accretion/internal/domain/git"
 	"github.com/stretchr/testify/assert"
+	"net/url"
 	"testing"
 )
 
-const cloneHTTPS = "https://github.com/dbtedman/accretion.git"
-const cloneSSH = "git@github.com:dbtedman/accretion.git"
-const url = "https://github.com/dbtedman/accretion"
+const theURL = "https://github.com/dbtedman/accretion"
 
 func TestGitRepositoryHasCloneHTTPS(t *testing.T) {
-	gitCloneSSH, _ := git.NewSSH(cloneSSH)
-	repository := git.NewRepository(cloneHTTPS, gitCloneSSH, url)
+	aCloneSSH, aURL := setup()
 
-	assert.Equal(t, cloneHTTPS, repository.CloneHTTPS())
+	result := git.NewRepository(TheCloneHTTPS, aCloneSSH, aURL).CloneHTTPS()
+
+	assert.Equal(t, TheCloneHTTPS, result)
 }
 
 func TestGitRepositoryHasCloneSSH(t *testing.T) {
-	gitCloneSSH, _ := git.NewSSH(cloneSSH)
-	repository := git.NewRepository(cloneHTTPS, gitCloneSSH, url)
+	aCloneSSH, aURL := setup()
 
-	assert.Equal(t, cloneSSH, repository.CloneSSH().ToString())
-	assert.Implements(t, (*git.SSH)(nil), repository.CloneSSH())
+	result := git.NewRepository(TheCloneHTTPS, aCloneSSH, aURL).CloneSSH()
+
+	assert.Equal(t, aCloneSSH, result)
 }
 
 func TestGitRepositoryHasURL(t *testing.T) {
-	gitCloneSSH, _ := git.NewSSH(cloneSSH)
-	repository := git.NewRepository(cloneHTTPS, gitCloneSSH, url)
+	aGitCloneSSH, aParsedURL := setup()
 
-	assert.Equal(t, url, repository.URL())
+	result := git.NewRepository(TheCloneHTTPS, aGitCloneSSH, aParsedURL).URL()
+
+	assert.Equal(t, aParsedURL, result)
+}
+
+func setup() (git.CloneSSH, url.URL) {
+	aGitCloneSSH, _ := git.ParseCloneSSH(TheCloneSSH)
+	aParsedURL, _ := url.Parse(theURL)
+
+	return aGitCloneSSH, *aParsedURL
 }
