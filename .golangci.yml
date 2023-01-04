@@ -1,46 +1,50 @@
+linters-settings:
+    gofumpt:
+        lang-version: "1.19"
+
 linters:
     disable-all: true
     enable:
-        - bodyclose
-        - depguard
-        - dogsled
-        - dupl
-        - errcheck
-        - exportloopref
-        - funlen
-        - gochecknoinits
-        - goconst
-        - gocritic
-        - gocyclo
-        - gofmt
-        - goimports
-        - gomnd
-        - goprintffuncname
-        # https://github.com/securego/gosec
-        # TODO: - gosec
-        - gosimple
-        - govet
-        - ineffassign
-        - lll
-        - misspell
-        - nakedret
-        - noctx
-        - nolintlint
-        - staticcheck
-        - stylecheck
-        - typecheck
-        - unconvert
-        - unparam
-        - unused
-        - whitespace
-        - asciicheck
-        - gochecknoglobals
-        - gocognit
-        - godot
-        #        - godox
-        - goerr113
-        - nestif
-        - prealloc
-        - testpackage
-        - revive
-#        - wsl
+        # - gosec # https://github.com/securego/gosec
+        # - wsl # https://golangci-lint.run/usage/linters/#wsl
+        - asciicheck # https://github.com/tdakkota/asciicheck
+        - bodyclose # https://github.com/timakin/bodyclose
+        - depguard # https://github.com/OpenPeeDeeP/depguard
+        - dogsled # https://github.com/alexkohler/dogsled
+        - dupl # https://github.com/mibk/dupl
+        - errcheck # https://golangci-lint.run/usage/linters/#errcheck
+        - exportloopref # https://github.com/kyoh86/exportloopref
+        - funlen # https://golangci-lint.run/usage/linters/#funlen
+        - gochecknoglobals # https://github.com/leighmcculloch/gochecknoglobals
+        - gochecknoinits # https://github.com/leighmcculloch/gochecknoinits
+        - gocognit # https://github.com/uudashr/gocognit
+        - goconst # https://github.com/jgautheron/goconst
+        - gocritic # https://github.com/go-critic/go-critic
+        - gocyclo # https://github.com/fzipp/gocyclo
+        - godot # https://github.com/tetafro/godot
+        - godox # https://golangci-lint.run/usage/linters/#godox
+        - goerr113 # https://github.com/Djarvur/go-err113
+        - gofmt # https://golangci-lint.run/usage/linters/#gofmt
+        - gofumpt # https://golangci-lint.run/usage/linters/#gofumpt
+        - goimports # https://golangci-lint.run/usage/linters/#goimports
+        - gomnd # https://golangci-lint.run/usage/linters/#gomnd
+        - goprintffuncname # https://github.com/jirfag/go-printf-func-name
+        - gosimple # https://golangci-lint.run/usage/linters/#gosimple
+        - govet # https://golangci-lint.run/usage/linters/#govet
+        - ineffassign # https://github.com/gordonklaus/ineffassign
+        - lll # https://golangci-lint.run/usage/linters/#lll
+        - misspell # https://github.com/client9/misspell
+        - nakedret # https://github.com/alexkohler/nakedret
+        - nestif # https://github.com/nakabonne/nestif
+        - noctx # https://github.com/sonatard/noctx
+        - nolintlint # https://golangci-lint.run/usage/linters/#nolintlint
+        - prealloc # https://golangci-lint.run/usage/linters/#prealloc
+        - revive # https://golangci-lint.run/usage/linters/#revive
+        - staticcheck # https://golangci-lint.run/usage/linters/#staticcheck
+        - stylecheck # https://golangci-lint.run/usage/linters/#stylecheck
+        - testpackage # https://golangci-lint.run/usage/linters/#testpackage
+        - typecheck # https://golangci-lint.run/usage/linters/#typecheck
+        - unconvert # https://github.com/mdempsky/unconvert
+        - unparam # https://github.com/mvdan/unparam
+        - unused # https://github.com/dominikh/go-tools/tree/master/unused
+        - whitespace # https://github.com/ultraware/whitespace

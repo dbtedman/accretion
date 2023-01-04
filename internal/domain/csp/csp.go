@@ -11,10 +11,12 @@ import (
 	"golang.org/x/crypto/argon2"
 )
 
-const argon2Iterations = uint32(2)
-const argon2Memory = uint32(15 * 1024) // ~15 MB
-const argon2Parallelism = uint8(1)
-const argon2KeyLength = uint32(16)
+const (
+	argon2Iterations  = uint32(2)
+	argon2Memory      = uint32(15 * 1024) // ~15 MB
+	argon2Parallelism = uint8(1)
+	argon2KeyLength   = uint32(16)
+)
 
 func Generate(nonce string) string {
 	defaultSrc := "default-src 'self'"

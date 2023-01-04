@@ -7,8 +7,10 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-const TheCloneHTTPS = "https://github.com/dbtedman/accretion.git"
-const TheCloneHTTP = "http://github.com/dbtedman/accretion.git"
+const (
+	TheCloneHTTPS = "https://github.com/dbtedman/accretion.git"
+	TheCloneHTTP  = "http://github.com/dbtedman/accretion.git"
+)
 
 func TestParseCloneHTTPSecure(t *testing.T) {
 	result, resultError := git.ParseCloneHTTP(TheCloneHTTPS)

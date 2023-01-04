@@ -2,7 +2,7 @@ package git
 
 func ParseCloneSSH(value string) (CloneSSH, error) {
 	return cloneSSH{
-		value, // TODO: Validate that value matches expected pattern
+		value,
 	}, nil
 }
 

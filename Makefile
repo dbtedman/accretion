@@ -18,15 +18,11 @@ install_pnpm:
 	@pnpm install
 
 .PHONY: lint
-lint: lint_pnpm lint_go_fmt lint_golang_ci
+lint: lint_pnpm lint_golang_ci
 
 .PHONY: lint_pnpm
 lint_pnpm:
 	@pnpm run lint
-
-.PHONY: lint_go_fmt
-lint_go_fmt:
-	@gofmt -l ./cmd ./internal
 
 .PHONY: lint_golang_ci
 lint_golang_ci:
@@ -38,7 +34,7 @@ type_check:
 
 .PHONY: format
 format:
-	@pnpm run format && gofmt -w ./cmd ./internal && golangci-lint run --fix
+	@pnpm run format && golangci-lint run --fix
 
 .PHONY: test
 test:

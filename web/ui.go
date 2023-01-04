@@ -15,9 +15,11 @@ import (
 //go:embed dist
 var embeddedFS embed.FS
 
-const HTTPContentType = "Content-Type"
-const HTTPCacheControl = "Cache-Control"
-const HTTPContentSecurityPolicy = "Content-Security-Policy"
+const (
+	HTTPContentType           = "Content-Type"
+	HTTPCacheControl          = "Cache-Control"
+	HTTPContentSecurityPolicy = "Content-Security-Policy"
+)
 
 func UI() {
 	distDirectory, err := fs.Sub(embeddedFS, "dist")

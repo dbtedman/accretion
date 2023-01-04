@@ -29,7 +29,7 @@ jobs:
                   go-version-file: "./go.mod"
             - run: "make install"
             - run: "make build"
-            - run: "make lint_pnpm lint_go_fmt"
+            - run: "make lint_pnpm"
             - uses: "golangci/golangci-lint-action@0ad9a0988b3973e851ab0a07adf248ec2e100376"
               with:
                   version: "latest"
