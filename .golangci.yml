@@ -1,4 +1,5 @@
 linters-settings:
+    # https://golangci-lint.run/usage/linters/#gofumpt
     gofumpt:
         lang-version: "1.19"
 
