@@ -2,6 +2,7 @@
 
 [![CI GitHub Pipeline](https://img.shields.io/github/actions/workflow/status/dbtedman/accretion/ci.yml?branch=main&style=for-the-badge&logo=github&label=ci)](https://github.com/dbtedman/accretion/actions/workflows/ci.yml?query=branch%3Amain)
 [![SAST GitHub Pipeline](https://img.shields.io/github/actions/workflow/status/dbtedman/accretion/sast.yml?branch=main&style=for-the-badge&logo=github&label=sast)](https://github.com/dbtedman/accretion/actions/workflows/sast.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/dbtedman/accretion?style=for-the-badge)](https://goreportcard.com/report/github.com/dbtedman/accretion)
 
 > ⚠️ WARNING! This project is in early development, and is not ready for production use.
 
@@ -110,6 +111,7 @@ though the data.
 -   [✅ Go (go.dev)](https://go.dev)
 -   [✅ Go Embed (pkg.go.dev)](https://pkg.go.dev/embed)
 -   [✅ Go Modules (go.dev)](https://go.dev/ref/mod)
+-   [✅ Go Report Card (goreportcard.com)](https://goreportcard.com/)
 -   [✅ GolangCI Lint (github.com)](https://github.com/golangci/golangci-lint)
 -   [✅ Happy Dom (github.com)](https://github.com/capricorn86/happy-dom)
 -   [✅ Husky (typicode.github.io)](https://typicode.github.io/husky/#/)
