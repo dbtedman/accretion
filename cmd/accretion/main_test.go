@@ -1,14 +1,14 @@
-package main_test
+package main
 
 import (
 	"bytes"
-	"github.com/dbtedman/accretion/cmd/accretion"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestRootCommandWithoutFlags(t *testing.T) {
-	command := main.RootCommand()
+	command := RootCommand()
 	var errConsole bytes.Buffer
 	var outConsole bytes.Buffer
 	command.SetErr(&errConsole)

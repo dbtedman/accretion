@@ -22,7 +22,7 @@ type repository struct {
 	url        url.URL
 }
 
-// ensure repository implements Repository interface
+// ensure repository implements Repository interface.
 var _ Repository = repository{}
 
 func (my repository) CloneHTTPS() string {

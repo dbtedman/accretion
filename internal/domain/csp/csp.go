@@ -1,11 +1,14 @@
 package csp
 
 import (
+	"crypto/rand"
 	"encoding/hex"
-	"golang.org/x/crypto/argon2"
-	"math/rand"
+	"math"
+	"math/big"
 	"strconv"
 	"time"
+
+	"golang.org/x/crypto/argon2"
 )
 
 const argon2Iterations = uint32(2)
@@ -24,7 +27,8 @@ func Generate(nonce string) string {
 
 func GenerateNonce() string {
 	plainText := time.Now().Format("2006-01-02 15:04:05.000000000")
-	salt := strconv.FormatUint(rand.Uint64(), 10)
+	nBig, _ := rand.Int(rand.Reader, big.NewInt(math.MaxInt64))
+	salt := strconv.FormatUint(nBig.Uint64(), 10)
 
 	hash := argon2.IDKey(
 		[]byte(plainText),

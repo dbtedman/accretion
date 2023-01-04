@@ -16,11 +16,13 @@ func ParseCloneHTTP(value string) (CloneHTTP, error) {
 }
 
 func validateCloneHTTPValue(value string) error {
-	if !regexp.MustCompile("https?://.+\\.git$").MatchString(value) {
-		return errors.New("value must match expected pattern")
+	if !regexp.MustCompile(`https?://.+\.git$`).MatchString(value) {
+		return errorInvalidCloneHTTPValue
 	}
 	return nil
 }
+
+var errorInvalidCloneHTTPValue = errors.New("value must match expected pattern")
 
 type CloneHTTP interface {
 	String() string
@@ -30,7 +32,7 @@ type cloneHTTP struct {
 	value string
 }
 
-// ensure cloneHTTP implements CloneHTTP interface
+// ensure cloneHTTP implements CloneHTTP interface.
 var _ CloneHTTP = cloneHTTP{}
 
 func (my cloneHTTP) String() string {

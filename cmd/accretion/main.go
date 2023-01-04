@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/dbtedman/accretion/web"
-	"github.com/spf13/cobra"
 	"math/rand"
 	"net/http"
 	"os"
 	"time"
+
+	"github.com/dbtedman/accretion/web"
+	"github.com/spf13/cobra"
 )
 
 const commandError = 1

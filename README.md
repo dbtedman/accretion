@@ -110,6 +110,7 @@ though the data.
 -   [✅ Go (go.dev)](https://go.dev)
 -   [✅ Go Embed (pkg.go.dev)](https://pkg.go.dev/embed)
 -   [✅ Go Modules (go.dev)](https://go.dev/ref/mod)
+-   [✅ GolangCI Lint (github.com)](https://github.com/golangci/golangci-lint)
 -   [✅ Happy Dom (github.com)](https://github.com/capricorn86/happy-dom)
 -   [✅ Husky (typicode.github.io)](https://typicode.github.io/husky/#/)
 -   [✅ Node Version Manager (github.com)](https://github.com/nvm-sh/nvm)

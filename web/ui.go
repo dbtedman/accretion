@@ -3,12 +3,13 @@ package web
 import (
 	"embed"
 	"fmt"
-	"github.com/dbtedman/accretion/internal/domain/csp"
 	"io/fs"
 	"log"
 	"net/http"
 	"regexp"
 	"strings"
+
+	"github.com/dbtedman/accretion/internal/domain/csp"
 )
 
 //go:embed dist

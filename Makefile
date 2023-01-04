@@ -19,7 +19,7 @@ install_pnpm:
 
 .PHONY: lint
 lint:
-	@pnpm run lint && gofmt -l ./cmd ./internal
+	@pnpm run lint && gofmt -l ./cmd ./internal && golangci-lint run
 
 .PHONY: type_check
 type_check:
@@ -27,7 +27,7 @@ type_check:
 
 .PHONY: format
 format:
-	@pnpm run format && gofmt -w ./cmd ./internal
+	@pnpm run format && gofmt -w ./cmd ./internal && golangci-lint run --fix
 
 .PHONY: test
 test:

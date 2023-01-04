@@ -1,9 +1,10 @@
 package git_test
 
 import (
+	"testing"
+
 	"github.com/dbtedman/accretion/internal/domain/git"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 const TheCloneSSH = "git@github.com:dbtedman/accretion.git"

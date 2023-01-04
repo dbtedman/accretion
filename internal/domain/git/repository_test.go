@@ -1,10 +1,11 @@
 package git_test
 
 import (
-	"github.com/dbtedman/accretion/internal/domain/git"
-	"github.com/stretchr/testify/assert"
 	"net/url"
 	"testing"
+
+	"github.com/dbtedman/accretion/internal/domain/git"
+	"github.com/stretchr/testify/assert"
 )
 
 const theURL = "https://github.com/dbtedman/accretion"

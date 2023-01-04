@@ -14,7 +14,7 @@ type cloneSSH struct {
 	value string
 }
 
-// ensure cloneSSH implements CloneSSH interface
+// ensure cloneSSH implements CloneSSH interface.
 var _ CloneSSH = cloneSSH{}
 
 func (my cloneSSH) String() string {
