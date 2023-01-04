@@ -27,8 +27,8 @@ jobs:
             - uses: "actions/setup-go@6edd4406fa81c3da01a34fa6f6343087c207a568"
               with:
                   go-version-file: "./go.mod"
-            - run: "curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.50.1 && export PATH=./bin:$PATH"
+            - run: "curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.50.1"
             - run: "make install"
-            - run: "make lint"
+            - run: "export PATH=./bin:$PATH && make lint"
             - run: "make build"
             - run: "make test"
