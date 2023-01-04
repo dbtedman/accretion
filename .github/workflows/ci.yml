@@ -27,11 +27,10 @@ jobs:
             - uses: "actions/setup-go@6edd4406fa81c3da01a34fa6f6343087c207a568"
               with:
                   go-version-file: "./go.mod"
-            - run: "curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.50.1"
             - run: "make install"
+            - run: "make build"
             - run: "make lint_pnpm lint_go_fmt"
             - uses: "golangci/golangci-lint-action@0ad9a0988b3973e851ab0a07adf248ec2e100376"
               with:
                   version: "latest"
-            - run: "make build"
             - run: "make test"
