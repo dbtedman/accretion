@@ -44,6 +44,8 @@ d2 -w --layout=elk ./doc/data-flow.d2 ./doc/data-flow.svg
 
 ## Domain
 
-### Product
+```shell
+d2 -w --layout=elk ./doc/domain.d2 ./doc/domain.svg
+```
 
-A logical grouping of resources identified by a single user identifiable name, e.g. "Online Store".
+![](./doc/domain.svg)
