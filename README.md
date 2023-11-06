@@ -34,6 +34,14 @@ The systems source of truth is an immutable stream of idempotent Events which re
 
 Queries won't be performed on the event log, but rather on projections derived from this log, e.g. `Search Index`.
 
+## Data Flow
+
+```shell
+d2 -w --layout=elk ./doc/data-flow.d2 ./doc/data-flow.svg
+```
+
+![](./doc/data-flow.svg)
+
 ## Domain
 
 ### Product
