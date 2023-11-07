@@ -37,7 +37,7 @@ Queries won't be performed on the event log, but rather on projections derived f
 ## Data Flow
 
 ```shell
-d2 -w --layout=elk ./doc/data-flow.d2 ./doc/data-flow.svg
+d2 -w -t 200 --layout=elk ./doc/data-flow.d2 ./doc/data-flow.svg
 ```
 
 ![](./doc/data-flow.svg)
@@ -45,7 +45,7 @@ d2 -w --layout=elk ./doc/data-flow.d2 ./doc/data-flow.svg
 ## Domain
 
 ```shell
-d2 -w --layout=elk ./doc/domain.d2 ./doc/domain.svg
+d2 -w -t 200  --layout=elk ./doc/domain.d2 ./doc/domain.svg
 ```
 
 ![](./doc/domain.svg)
