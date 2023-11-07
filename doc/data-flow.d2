@@ -2,24 +2,30 @@
 github_provider: "GitHub Provider"
 jira_provider: "Jira Provider"
 gitlab_provider: "GitLab Provider"
+confluence_provider: "Confluence Provider"
 
 harvester: "Harvester"
 harvester -> event_log: "appends data"
 harvester <- github_provider: "harvests data"
 harvester <- jira_provider: "harvests data"
 harvester <- gitlab_provider: "harvests data"
+harvester <- confluence_provider: "harvests data"
 
 event_log: "Append Only Log"
 
 search_index: "Search Index"
 search_index <- event_log: "reads from"
 
-edit_ui: "Edit UI"
-edit_ui -> event_log: "appends data"
+relational_db: "Relational DB"
+relational_db <- event_log: "reads from"
 
-discovery_ui: "Discovery UI"
-discovery_ui <- search_index: "queries from"
+contribute_ui: "Contribute UI"
+contribute_ui -> event_log: "appends data"
+contribute_ui <- relational_db: "queries from"
+
+discover_ui: "Discover UI"
+discover_ui <- search_index: "queries from"
 
 user: "User"
-user -> discovery_ui: "interacts with"
-user -> edit_ui: "interacts with"
+user -> discover_ui: "interacts with"
+user -> contribute_ui: "interacts with"

@@ -49,3 +49,13 @@ d2 -w -t 200  --layout=elk ./doc/domain.d2 ./doc/domain.svg
 ```
 
 ![](./doc/domain.svg)
+
+## UI
+
+### Discover
+
+Search, Filter, and Pivot though accreted data.
+
+### Contribute
+
+Add new resources or modify existing ones.

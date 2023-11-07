@@ -8,7 +8,7 @@ location: "Location [ protocol://domain:port ]"
 location -- taxonomy
 location -- product
 
-taxonomy: "Taxonomy"
+taxonomy: "Label"
 taxonomy -- product
 
 kubernetes_cluster: "Kubernetes Cluster"
@@ -21,3 +21,7 @@ kubernetes_namespace -- kubernetes_cluster
 kubernetes_deployment -- product
 kubernetes_namespace -- product
 kubernetes_cluster -- product
+
+document: "Document"
+document -- taxonomy
+document -- product
