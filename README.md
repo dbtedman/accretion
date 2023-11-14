@@ -15,6 +15,7 @@ Manage internal technical documentation that is enriched with live data accreted
 - Accessible
 - Immutable
 - Elegant
+- Standards
 
 ## Commands
 
