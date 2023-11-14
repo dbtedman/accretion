@@ -4,17 +4,17 @@ Manage internal technical documentation that is enriched with live data accreted
 
 ## Communication
 
--   [Related Articles (tedman.dev)](https://tedman.dev/topics/accretion/)
+- [Related Articles (tedman.dev)](https://tedman.dev/topics/accretion/)
 
 ## Principals
 
--   Secure
--   Verifiable
--   Open
--   Private
--   Accessible
--   Immutable
--   Elegant
+- Secure
+- Verifiable
+- Open
+- Private
+- Accessible
+- Immutable
+- Elegant
 
 ## Commands
 
@@ -26,9 +26,13 @@ Read only interaction with the system used to inspect its current state, e.g. `L
 
 ## Events
 
-The systems source of truth is an immutable stream of idempotent Events which represent changes that occur to the system, e.g. `Product Added`.
+The systems source of truth is an immutable stream of idempotent Events which represent changes that occur to the
+system, e.g. `Product Added`.
 
-> 💡 Sensitive data will be encrypted at rest, using a secret key associated with the owner of the data, which can be purged on request, see [GDPR Compliant Event Sourcing With HashiCorp Vault (hashicorp.com)](https://www.hashicorp.com/resources/gdpr-compliant-event-sourcing-with-hashicorp-vault) for reference.
+> 💡 Sensitive data will be encrypted at rest, using a secret key associated with the owner of the data, which can be
+> purged on request,
+> see [GDPR Compliant Event Sourcing With HashiCorp Vault (hashicorp.com)](https://www.hashicorp.com/resources/gdpr-compliant-event-sourcing-with-hashicorp-vault)
+> for reference.
 
 ## Projections
 
