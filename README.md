@@ -41,8 +41,7 @@ system, e.g. `Product Added`.
 
 > 💡 Sensitive data will be encrypted at rest, using a secret key associated with the owner of the data, which can be
 > purged on request,
->
-see [GDPR Compliant Event Sourcing With HashiCorp Vault (hashicorp.com)](https://www.hashicorp.com/resources/gdpr-compliant-event-sourcing-with-hashicorp-vault)
+> see [GDPR Compliant Event Sourcing With HashiCorp Vault (hashicorp.com)](https://www.hashicorp.com/resources/gdpr-compliant-event-sourcing-with-hashicorp-vault)
 > for reference.
 
 ## Projections
