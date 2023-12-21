@@ -2,6 +2,15 @@
 
 Manage internal technical documentation that is enriched with live data accreted from your environment.
 
+- [Communication](#communication)
+- [Principals](#principals)
+- [Commands](#commands)
+- [Queries](#queries)
+- [Events](#events)
+- [Projections](#projections)
+- [Data Flow](#data-flow)
+- [Infra](#infra)
+
 ## Communication
 
 - [Related Articles (tedman.dev)](https://tedman.dev/topics/accretion/)
@@ -19,7 +28,7 @@ Manage internal technical documentation that is enriched with live data accreted
 
 ## Commands
 
-Represents a request for a change to me made to the state of the system, e.g. `Add Product`.
+Represents a request for a change to be made to the state of the system, e.g. `Add Product`.
 
 ## Queries
 
@@ -32,7 +41,8 @@ system, e.g. `Product Added`.
 
 > 💡 Sensitive data will be encrypted at rest, using a secret key associated with the owner of the data, which can be
 > purged on request,
-> see [GDPR Compliant Event Sourcing With HashiCorp Vault (hashicorp.com)](https://www.hashicorp.com/resources/gdpr-compliant-event-sourcing-with-hashicorp-vault)
+>
+see [GDPR Compliant Event Sourcing With HashiCorp Vault (hashicorp.com)](https://www.hashicorp.com/resources/gdpr-compliant-event-sourcing-with-hashicorp-vault)
 > for reference.
 
 ## Projections
@@ -41,34 +51,14 @@ Queries won't be performed on the event log, but rather on projections derived f
 
 ## Data Flow
 
+A harvester populates data into the append only event log from each of the configured external services.
+
+![](./doc/data-flow.svg)
+
 ```shell
 d2 -w -t 200 --layout=elk ./doc/data-flow.d2 ./doc/data-flow.svg
 ```
 
-![](./doc/data-flow.svg)
-
-## Domain
-
-```shell
-d2 -w -t 200  --layout=elk ./doc/domain.d2 ./doc/domain.svg
-```
-
-![](./doc/domain.svg)
-
-## UI
-
-### Discover
-
-Search, Filter, and Pivot though accreted data.
-
-### Contribute
-
-Add new resources or modify existing ones.
-
 ## Infra
 
-```shell
-d2 -w -t 200  --layout=elk ./doc/infra.d2 ./doc/infra.svg
-```
-
-![](./doc/infra.svg)
+A single go binary with embedded web application supporting multiple replicas for redundancy and horizontal scalability.
