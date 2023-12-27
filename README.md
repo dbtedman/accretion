@@ -2,12 +2,6 @@
 
 Manage internal technical documentation that is enriched with live data accreted from your environment.
 
-- [Communication](#communication)
-- [Design](#design)
-- [How to contribute?](#how-to-contribute)
-- [Is this project secure?](#is-this-project-secure)
-- [License](#license)
-
 ## Communication
 
 - [Related Articles (tedman.dev)](https://tedman.dev/topics/accretion/)
