@@ -6,7 +6,9 @@ Placeholder
 
 ## Testing
 
-Placeholder
+```shell
+make install test
+```
 
 ## Release
 
