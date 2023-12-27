@@ -13,6 +13,6 @@ func NewApplication(log event.Loggable) Application {
 }
 
 func (my *Application) Start() error {
-	_ = my.log.Push(event.NewEvent("application_startup"))
+	_ = my.log.Append(event.NewEvent("application_startup"))
 	return nil
 }
