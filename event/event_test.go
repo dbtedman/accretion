@@ -13,7 +13,7 @@ func TestApplicationStartupPublishesEvent(t *testing.T) {
 	err := app.Start()
 	assert.Nil(t, err, "Application startup should not return error.")
 
-	anEvent, err := log.Pop()
+	anEvent, err := log.Latest()
 
 	assert.NotNil(t, anEvent, "A non null event should be popped.")
 	assert.Equal(t, anEvent.Kind(), "application_startup")

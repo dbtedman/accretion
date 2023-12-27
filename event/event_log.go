@@ -15,23 +15,21 @@ func (my Event) Kind() string {
 }
 
 type Loggable interface {
-	Push(Event) error
-	Pop() (Event, error)
+	Append(Event) error
+	Latest() (Event, error)
 }
 
 type InMemoryLog struct {
 	events []Event
 }
 
-func (my *InMemoryLog) Push(anEvent Event) error {
+func (my *InMemoryLog) Append(anEvent Event) error {
 	my.events = append(my.events, anEvent)
 	return nil
 }
 
-func (my *InMemoryLog) Pop() (Event, error) {
-	popped := my.events[len(my.events)-1]
-	my.events = my.events[:len(my.events)-1]
-	return popped, nil
+func (my *InMemoryLog) Latest() (Event, error) {
+	return my.events[len(my.events)-1], nil
 }
 
 var _ Loggable = &InMemoryLog{}
