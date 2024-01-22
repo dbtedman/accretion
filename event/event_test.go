@@ -1,10 +1,11 @@
 package event_test
 
 import (
+	"testing"
+
 	"github.com/dbtedman/accretion/application"
 	"github.com/dbtedman/accretion/event"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestApplicationStartupPublishesEvent(t *testing.T) {
