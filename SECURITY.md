@@ -22,7 +22,9 @@ Outlines how security is considered during the development of Accretion.
 
 ## Security Related Configuration
 
-🚧 Placeholder
+### Content Security Policy
+
+A strict [Content Security Policy (CSP) (developer.mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) has been defined to provide a layer of defence against injection attacks. Within this CSP, a per-request nonce is defined to whitelist allowed resources. This nonce is implemented using the [Argon2 Hashing Algorithm with recommended settings (cheatsheetseries.owasp.org)](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#argon2id).
 
 ## Known Security Gaps and Future Enhancements
 

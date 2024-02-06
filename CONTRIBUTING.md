@@ -2,7 +2,7 @@
 
 ## Code Style
 
-🚧 Placeholder
+Based on the [configured set of linters](./.golangci.yml).
 
 ## Linting
 
