@@ -1,5 +1,7 @@
 # [Accretion](https://github.com/dbtedman/accretion)
 
+> ⚠️ This project is still in early stages of development, please wait for a v1 before depending on it.
+
 [![CI GitHub Pipeline](https://img.shields.io/github/actions/workflow/status/dbtedman/accretion/ci.yml?branch=main&style=for-the-badge&logo=github&label=ci)](https://github.com/dbtedman/accretion/actions/workflows/ci.yml?query=branch%3Amain)
 [![Go Report Card](https://goreportcard.com/badge/github.com/dbtedman/accretion?style=for-the-badge)](https://goreportcard.com/report/github.com/dbtedman/accretion)
 
