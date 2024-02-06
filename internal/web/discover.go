@@ -30,7 +30,7 @@ func HandleDiscoverUI(htmlFS fs.FS) {
 
 		w.Header().Set(HTTPContentType, "text/html; charset=utf-8")
 		w.Header().Set(HTTPCacheControl, "max-age=0, private, must-revalidate")
-		w.Header().Set(HTTPContentSecurityPolicy, fmt.Sprintf("default-src 'none'; style-src 'nonce-%s'; font-src https://fonts.gstatic.com", nonce))
+		w.Header().Set(HTTPContentSecurityPolicy, security.GenerateContentSecurityPolicy(nonce))
 
 		type DiscoverData struct {
 			Description string
@@ -40,8 +40,8 @@ func HandleDiscoverUI(htmlFS fs.FS) {
 		}
 
 		err := htmlTemplates.ExecuteTemplate(w, "discover.gohtml", DiscoverData{
-			Description: "",
-			Title:       "",
+			Description: "Manage internal technical documentation that is enriched with live data accreted from your environment.",
+			Title:       "Accretion",
 			Nonce:       nonce,
 			Message:     "Hello, World!",
 		})
