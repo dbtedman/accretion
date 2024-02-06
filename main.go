@@ -1,19 +1,14 @@
 package main
 
 import (
-	"crypto/rand"
 	"embed"
-	"encoding/hex"
 	"fmt"
 	"html/template"
-	"math"
-	"math/big"
 	"net/http"
 	"regexp"
-	"strconv"
 	"time"
 
-	"golang.org/x/crypto/argon2"
+	"github.com/dbtedman/accretion/internal/security"
 )
 
 //go:embed static/*
@@ -28,14 +23,6 @@ const (
 	HTTPContentSecurityPolicy = "Content-Security-Policy"
 )
 
-// https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#argon2id
-const (
-	argon2Iterations  = uint32(2)
-	argon2Memory      = uint32(15 * 1024) // ~15 MB
-	argon2Parallelism = uint8(1)
-	argon2KeyLength   = uint32(16)
-)
-
 func main() {
 	htmlTemplates := template.Must(template.ParseFS(htmlFS, "html/*.gohtml"))
 
@@ -46,7 +33,7 @@ func main() {
 			return
 		}
 
-		nonce := pseudoRandomNonceArgon2()
+		nonce := security.PseudoRandomNonceArgon2()
 
 		w.Header().Set(HTTPContentType, "text/html; charset=utf-8")
 		w.Header().Set(HTTPCacheControl, "max-age=0, private, must-revalidate")
@@ -85,27 +72,6 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-}
-
-// PseudoRandomNonceArgon2 generates a pseudorandom hash for use as a nonce.
-func pseudoRandomNonceArgon2() string {
-	return hashArgon2(time.Now().Format("2006-01-02 15:04:05.000000000"), pseudoRandomSalt())
-}
-
-func hashArgon2(plainText string, salt string) string {
-	return hex.EncodeToString(argon2.IDKey(
-		[]byte(plainText),
-		[]byte(salt),
-		argon2Iterations,
-		argon2Memory,
-		argon2Parallelism,
-		argon2KeyLength,
-	))
-}
-
-func pseudoRandomSalt() string {
-	nBig, _ := rand.Int(rand.Reader, big.NewInt(math.MaxInt64))
-	return strconv.FormatUint(nBig.Uint64(), 10)
 }
 
 func staticHandlerMiddleware(assetsFS http.Handler) http.HandlerFunc {
