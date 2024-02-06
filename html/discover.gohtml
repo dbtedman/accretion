@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta
+        name="description"
+        content="{{ .Description }}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ .Title }}</title>
+    <style nonce="{{ .Nonce }}">
+        {{/* Avoid white flash by assigning background colour in html. */}}
+        @media (prefers-color-scheme: dark) {
+            html, body, :root {
+                background-color: #282a36;
+                color: #fff;
+            }
+        }
+    </style>
+    <link nonce="{{ .Nonce }}" rel="stylesheet" href="/static/discover.css"/>
+</head>
+<body>
+<main>
+    <p>{{ .Message }}</p>
+</main>
+</body>
+</html>
