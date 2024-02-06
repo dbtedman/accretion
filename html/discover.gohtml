@@ -18,9 +18,13 @@
         }
     </style>
     <link nonce="{{ .Nonce }}" rel="stylesheet" href="/static/discover.css"/>
+    <link nonce="{{ .Nonce }}" rel="preconnect" href="https://fonts.googleapis.com">
+    <link nonce="{{ .Nonce }}" rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link nonce="{{ .Nonce }}" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 <main>
+    <h1>The Message</h1>
     <p>{{ .Message }}</p>
 </main>
 </body>
