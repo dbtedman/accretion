@@ -2,7 +2,7 @@
 
 ## Code Style
 
-Placeholder
+🚧 Placeholder
 
 ## Linting
 
@@ -24,4 +24,4 @@ make test
 
 ## Release
 
-Placeholder
+🚧 Placeholder
