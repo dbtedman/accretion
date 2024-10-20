@@ -28,6 +28,11 @@ builds:
         - "arm64"
       main: "./main.go"
 
+archives:
+  -   format: "binary"
+      id: "binary"
+      name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+
 brews:
   -   name: "accretion"
       ids:
