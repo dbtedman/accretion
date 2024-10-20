@@ -1,4 +1,4 @@
-# Accretion
+# [Accretion](https://github.com/dbtedman/accretion)
 
 Navigate internet resources from the command line.
 
