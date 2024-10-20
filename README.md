@@ -2,8 +2,17 @@
 
 Navigate internet resources from the command line.
 
+- [Usage Instructions](#usage-instructions)
 - [Design](#design)
 - [License](#license)
+
+## Usage Instructions
+
+```shell
+brew install dbtedman/tap/accretion
+
+accretion
+```
 
 ## Design
 
