@@ -5,17 +5,6 @@ Navigate internet resources from the command line.
 - [Design](#design)
 - [License](#license)
 
-## Local Development
-
-```shell
-go mod tidy
-go mod vendor
-```
-
-```shell
-CGO_ENABLED=0 go test
-```
-
 ## Design
 
 ### Workflow

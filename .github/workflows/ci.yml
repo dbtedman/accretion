@@ -17,5 +17,15 @@ jobs:
     steps:
       - uses: "actions/checkout@v4.1.7"
       - uses: "actions/setup-go@v5.0.2"
+        with: { go-version-file: "./go.mod" }
+      - uses: "golangci/golangci-lint-action@v6.1.1"
+        with: { version: "latest" }
+      - name: "lint"
+        run: "make lint"
+      - name: "test"
+        run: "make test"
+      - name: "build"
+        uses: "goreleaser/goreleaser-action@v6.0.0"
         with:
-          go-version-file: "./go.mod"
+          version: "latest"
+          args: "build --clean --snapshot"
