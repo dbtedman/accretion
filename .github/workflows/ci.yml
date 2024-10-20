@@ -1,0 +1,21 @@
+name: "ci"
+
+on:
+  pull_request:
+    branches:
+      - "main"
+  push:
+    branches:
+      - "main"
+
+permissions: "read-all"
+
+jobs:
+  linux:
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: "actions/checkout@v4.1.7"
+      - uses: "actions/setup-go@v5.0.2"
+        with:
+          go-version-file: "./go.mod"
