@@ -2,3 +2,28 @@ version: 2
 
 before:
   hooks: [ "go mod tidy" ]
+
+builds:
+  -   env:
+        # Build a statically-linked binary without external dependencies.
+        - "CGO_ENABLED=0"
+      mod_timestamp: "{{ .CommitTimestamp }}"
+      flags:
+        # Remove all file system paths from the resulting executable.
+        - "-trimpath"
+      ldflags:
+        # Omit the symbol table and debug information.
+        - "-s"
+        # Omit the DWARF symbol table.
+        - "-w"
+        # Populate build information into version variables.
+        - "-X github.com/dbtedman/accretion/main.version={{.Version}}"
+        - "-X github.com/dbtedman/accretion/main.commit={{.Commit}}"
+        - "-X github.com/dbtedman/accretion/main.date={{.CommitDate}}"
+      goos:
+        - "linux"
+        - "darwin"
+      goarch:
+        - "amd64"
+        - "arm64"
+      main: "./main.go"
