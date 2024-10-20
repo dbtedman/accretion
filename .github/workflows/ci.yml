@@ -10,8 +10,11 @@ on:
 
 permissions: "read-all"
 
+env:
+  CGO_ENABLED: 0
+
 jobs:
-  linux:
+  ci:
     runs-on: "ubuntu-latest"
 
     steps:
@@ -26,6 +29,4 @@ jobs:
         run: "make test"
       - name: "build"
         uses: "goreleaser/goreleaser-action@v6.0.0"
-        with:
-          version: "latest"
-          args: "build --clean --snapshot"
+        with: { version: "latest", args: "build --clean --snapshot" }
