@@ -1,5 +1,8 @@
 # [Accretion](https://github.com/dbtedman/accretion)
 
+[![CI GitHub Pipeline](https://img.shields.io/github/actions/workflow/status/dbtedman/accretion/ci.yml?branch=main&style=for-the-badge&logo=github&label=ci)](https://github.com/dbtedman/accretion/actions/workflows/ci.yml?query=branch%3Amain)
+[![Latest Release](https://img.shields.io/github/v/release/dbtedman/accretion?style=for-the-badge&logo=github&color=43cc11)](https://github.com/dbtedman/accretion/releases)
+
 Navigate internet resources from the command line.
 
 - [Usage Instructions](#usage-instructions)
