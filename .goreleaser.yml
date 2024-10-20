@@ -32,7 +32,7 @@ brews:
   -   name: "accretion"
       ids:
         - "binary"
-      tap:
+      repository:
         owner: "dbtedman"
         name: "homebrew-tap"
         branch: "main"
@@ -40,4 +40,4 @@ brews:
       homepage: "https://github.com/dbtedman/accretion"
       description: "Navigate internet resources from the command line."
       license: "MIT"
-      folder: "Formula"
+      directory: "Formula"
