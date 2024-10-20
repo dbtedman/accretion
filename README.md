@@ -19,6 +19,10 @@ accretion
 
 ## Design
 
+### Reference
+
+- [RDAP Client (client.rdap.org)](https://client.rdap.org)
+
 ### Workflow
 
 Query on various internet resources:
