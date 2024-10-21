@@ -19,6 +19,11 @@ Evaluate application security best practice implementation for running applicati
 brew install dbtedman/tap/accretion
 ```
 
+## Dependencies
+
+- [Cobra](https://github.com/spf13/cobra) To assist in defining the CLI.
+- [Log](https://github.com/charmbracelet/log) Improves the look of log outputs.
+
 ## Design
 
 ### Interceptor

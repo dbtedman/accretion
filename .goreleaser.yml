@@ -19,9 +19,9 @@ builds:
       # Omit the DWARF symbol table.
       - "-w"
       # Populate build information into version variables.
-      - "-X github.com/dbtedman/accretion/main.version={{.Version}}"
-      - "-X github.com/dbtedman/accretion/main.commit={{.Commit}}"
-      - "-X github.com/dbtedman/accretion/main.date={{.CommitDate}}"
+      - "-X github.com/dbtedman/accretion/cmd.version={{.Version}}"
+      - "-X github.com/dbtedman/accretion/cmd.commit={{.Commit}}"
+      - "-X github.com/dbtedman/accretion/cmd.date={{.CommitDate}}"
     goos:
       - "darwin"
     goarch:

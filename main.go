@@ -1,7 +1,10 @@
 package main
 
-import "log"
-import "github.com/spf13/cobra"
+import (
+	"github.com/charmbracelet/log"
+	"github.com/dbtedman/accretion/cmd"
+	"github.com/dbtedman/accretion/config"
+)
 
 // version, commit, and date are populated during build
 var (
@@ -11,21 +14,6 @@ var (
 )
 
 func main() {
-	rootCommand := &cobra.Command{
-		Use: "accretion",
-		Run: func(cmd *cobra.Command, args []string) {
-			_ = cmd.Help()
-		},
-	}
-
-	rootCommand.AddCommand(
-		&cobra.Command{
-			Use: "version",
-			Run: func(cmd *cobra.Command, args []string) {
-				log.Printf("scrutinise version: %s, commit: %s, built at: %s", version, commit, date)
-			},
-		},
-	)
-
-	_ = rootCommand.Execute()
+	log.Info(config.Name)
+	_ = cmd.RootCommand().Execute()
 }

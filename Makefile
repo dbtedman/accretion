@@ -22,3 +22,7 @@ build:
 .PHONY: test
 test:
 	@CGO_ENABLED=1 go test -race $(shell go list ./... | grep -v /vendor/)
+
+.PHONY: release_dry_run
+release_dry_run:
+	@CGO_ENABLED=0 goreleaser release --clean --skip=publish --skip=validate
