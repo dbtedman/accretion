@@ -13,11 +13,12 @@ var (
 	date    = "n/a"
 )
 
-func VersionCommand() *cobra.Command {
+func VersionCommand(errorCh *chan error) *cobra.Command {
 	return &cobra.Command{
 		Use: "version",
 		Run: func(cmd *cobra.Command, args []string) {
 			log.Info(config.Name, "version", version, "commit", commit, "date", date)
+			*errorCh <- nil
 		},
 	}
 }

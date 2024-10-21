@@ -5,15 +5,23 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func RootCommand() *cobra.Command {
+func RootCommand(errorCh *chan error) *cobra.Command {
 	cmd := &cobra.Command{
-		Use: config.Name,
+		Use:   config.Name,
+		Short: config.Purpose,
 		Run: func(cmd *cobra.Command, args []string) {
-			_ = cmd.Help()
+			err := cmd.Help()
+
+			if err != nil {
+				*errorCh <- err
+			} else {
+				*errorCh <- nil
+			}
 		},
 	}
 
-	cmd.AddCommand(VersionCommand())
+	cmd.AddCommand(CollectCommand(errorCh))
+	cmd.AddCommand(VersionCommand(errorCh))
 
 	return cmd
 }

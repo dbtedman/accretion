@@ -8,6 +8,8 @@
 Evaluate application security best practice implementation for running applications.
 
 - [Usage Instructions](#usage-instructions)
+- [Dependencies](#dependencies)
+- [Resources](#resources)
 - [Design](#design)
 - [License](#license)
 
@@ -21,8 +23,21 @@ brew install dbtedman/tap/accretion
 
 ## Dependencies
 
-- [Cobra](https://github.com/spf13/cobra) To assist in defining the CLI.
-- [Log](https://github.com/charmbracelet/log) Improves the look of log outputs.
+| Package                                        | Purpose                      |
+|------------------------------------------------|------------------------------|
+| [Cobra](https://github.com/spf13/cobra)        | Improved CLI implementation. |
+| [Log](https://github.com/charmbracelet/log)    | Improved logging.            |
+| [Testify](https://github.com/stretchr/testify) | Test assertions.             |
+
+## Resources
+
+Resources referenced during the development of accretion.
+
+- [Building a proxy server in Golang (mauricio.github.io)](https://mauricio.github.io/golang-proxies/#/)
+- [Golang UK Conference 2017 | Ian Kent - Production-ready Go (youtube.com)](https://www.youtube.com/watch?v=YF1qSfkDGAQ)
+- [Goreleaser - homebrew (goreleaser.com)](https://goreleaser.com/customization/homebrew/)
+- [How to Create a Reverse Proxy using Golang (codedodle.com)](https://www.codedodle.com/go-reverse-proxy-example.html)
+- [V. Single Host Reverse Proxy (fideloper.com)](https://fideloper.com/golang-single-host-reverse-proxy)
 
 ## Design
 
