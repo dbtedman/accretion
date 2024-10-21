@@ -1,9 +1,11 @@
 # [Accretion](https://github.com/dbtedman/accretion)
 
+> ⚠️ This is pre-release software, please do not use in production.
+
 [![CI GitHub Pipeline](https://img.shields.io/github/actions/workflow/status/dbtedman/accretion/ci.yml?branch=main&style=for-the-badge&logo=github&label=ci)](https://github.com/dbtedman/accretion/actions/workflows/ci.yml?query=branch%3Amain)
 [![Latest Release](https://img.shields.io/github/v/release/dbtedman/accretion?style=for-the-badge&logo=github&color=43cc11)](https://github.com/dbtedman/accretion/releases)
 
-Navigate internet resources from the command line.
+Evaluate application security best practice implementation for running applications.
 
 - [Usage Instructions](#usage-instructions)
 - [Design](#design)
@@ -11,45 +13,29 @@ Navigate internet resources from the command line.
 
 ## Usage Instructions
 
+### Install
+
 ```shell
 brew install dbtedman/tap/accretion
-
-accretion
 ```
 
 ## Design
 
-### Reference
+### Interceptor
 
-- [RDAP Client (client.rdap.org)](https://client.rdap.org)
+Component that intercepts traffic and collects metrics.
 
-### Workflow
+### Collector
 
-Query on various internet resources:
+Component that accepts metrics from the interceptor on a regular schedule.
 
-```shell
-accretion AS4608
-accretion NO4-AP
-accretion 2001:dc0::/32
-accretion 202.12.31.0/24
-accretion tedman.dev
-```
+### Notifier
 
-Render output in different standard formats:
+Component that publishes alerts based on defined policies.
 
-```shell
-accretion tedman.dev --json
-```
+### Navigator
 
-### Authoritative Sources
-
-#### Registration Data Access Protocol (RDAP)
-
-- AFRINIC https://rdap.afrinic.net
-- APNIC https://rdap.apnic.net
-- ARIN https://rdap.arin.net
-- LACNIC https://rdap.lacnic.net
-- RIPE NCC https://rdap.db.ripe.net
+Component that provides a user interface for navigating collected metrics.
 
 ## License
 
