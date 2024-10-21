@@ -21,6 +21,12 @@ Evaluate application security best practice implementation for running applicati
 brew install dbtedman/tap/accretion
 ```
 
+### Run
+
+```shell
+accretion
+```
+
 ## Dependencies
 
 | Package                                        | Purpose                      |
