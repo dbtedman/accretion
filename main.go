@@ -5,6 +5,7 @@ import (
 	"github.com/charmbracelet/log"
 	"github.com/dbtedman/accretion/cmd"
 	"github.com/dbtedman/accretion/config"
+	"github.com/dbtedman/accretion/interceptor"
 	"os"
 	"os/signal"
 	"syscall"
@@ -20,7 +21,9 @@ func main() {
 func run(errorCh *chan error) {
 	log.Info(config.Name)
 
-	err := cmd.RootCommand(errorCh).Execute()
+	var proxyServer interceptor.Proxy = &interceptor.ServerProxy{}
+
+	err := cmd.RootCommand(errorCh, &proxyServer).Execute()
 
 	if err != nil {
 		*errorCh <- err
