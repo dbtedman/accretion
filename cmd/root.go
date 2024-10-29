@@ -21,7 +21,7 @@ func RootCommand(errorCh *chan error, proxyServer *interceptor.Proxy) *cobra.Com
 		},
 	}
 
-	cmd.AddCommand(CollectCommand(errorCh, proxyServer))
+	cmd.AddCommand(InterceptCommand(errorCh, proxyServer))
 	cmd.AddCommand(VersionCommand(errorCh))
 
 	return cmd

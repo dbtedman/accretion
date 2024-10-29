@@ -7,12 +7,12 @@ import (
 	"net/url"
 )
 
-func CollectCommand(errorCh *chan error, proxyServer *interceptor.Proxy) *cobra.Command {
+func InterceptCommand(errorCh *chan error, proxyServer *interceptor.Proxy) *cobra.Command {
 	var listenAddress string
 	var proxyAddress string
 
 	cmd := &cobra.Command{
-		Use: "collect",
+		Use: "intercept",
 		Run: func(cmd *cobra.Command, args []string) {
 			proxyAddressURL, _ := url.Parse(proxyAddress)
 			interceptor.ListenHTTPWithProxy(*proxyServer, *proxyAddressURL, listenAddress, errorCh)

@@ -13,7 +13,7 @@ func TestCollectCommand(t *testing.T) {
 	var errConsole bytes.Buffer
 	var outConsole bytes.Buffer
 	var proxyServer interceptor.Proxy = &interceptor.TestProxy{}
-	command := cmd.CollectCommand(&errorCh, &proxyServer)
+	command := cmd.InterceptCommand(&errorCh, &proxyServer)
 	command.SetErr(&errConsole)
 	command.SetOut(&outConsole)
 

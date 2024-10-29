@@ -2,9 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/charmbracelet/log"
 	"github.com/dbtedman/accretion/cmd"
-	"github.com/dbtedman/accretion/config"
 	"github.com/dbtedman/accretion/interceptor"
 	"os"
 	"os/signal"
@@ -19,8 +17,6 @@ func main() {
 }
 
 func run(errorCh *chan error) {
-	log.Info(config.Name)
-
 	var proxyServer interceptor.Proxy = &interceptor.ServerProxy{}
 
 	err := cmd.RootCommand(errorCh, &proxyServer).Execute()
