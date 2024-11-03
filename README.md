@@ -40,9 +40,11 @@ accretion
 Resources referenced during the development of accretion.
 
 - [Building a proxy server in Golang (mauricio.github.io)](https://mauricio.github.io/golang-proxies/#/)
+- [Cobra: A Framework for Modern CLI Apps in Go (cobra.dev)](https://cobra.dev)
 - [Golang UK Conference 2017 | Ian Kent - Production-ready Go (youtube.com)](https://www.youtube.com/watch?v=YF1qSfkDGAQ)
 - [Goreleaser - homebrew (goreleaser.com)](https://goreleaser.com/customization/homebrew/)
 - [How to Create a Reverse Proxy using Golang (codedodle.com)](https://www.codedodle.com/go-reverse-proxy-example.html)
+- [Testing Your (HTTP) Handlers in Go (blog.questionable.services)](https://blog.questionable.services/article/testing-http-handlers-go/)
 - [V. Single Host Reverse Proxy (fideloper.com)](https://fideloper.com/golang-single-host-reverse-proxy)
 
 ## Design

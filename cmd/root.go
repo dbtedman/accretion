@@ -2,10 +2,11 @@ package cmd
 
 import (
 	"github.com/dbtedman/accretion/config"
+	"github.com/dbtedman/accretion/interceptor"
 	"github.com/spf13/cobra"
 )
 
-func RootCommand(errorCh *chan error) *cobra.Command {
+func RootCommand(errorCh *chan error, proxyServer *interceptor.Proxy) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   config.Name,
 		Short: config.Purpose,
@@ -20,7 +21,7 @@ func RootCommand(errorCh *chan error) *cobra.Command {
 		},
 	}
 
-	cmd.AddCommand(CollectCommand(errorCh))
+	cmd.AddCommand(InterceptCommand(errorCh, proxyServer))
 	cmd.AddCommand(VersionCommand(errorCh))
 
 	return cmd
