@@ -28,5 +28,5 @@ jobs:
       - name: "test"
         run: "make test"
       - name: "build"
-        uses: "goreleaser/goreleaser-action@v6.1.0"
+        uses: "goreleaser/goreleaser-action@v6.3.0"
         with: { version: "latest", args: "build --clean --snapshot" }
